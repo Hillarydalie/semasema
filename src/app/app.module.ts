@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SemaComponent } from './sema/sema.component';
 import { SemaDescriptionComponent } from './sema-description/sema-description.component';
 import { SemaFormComponent } from './sema-form/sema-form.component';
+import { SemaDatecountPipe } from './sema-datecount.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SemaComponent,
     SemaDescriptionComponent,
-    SemaFormComponent
+    SemaFormComponent,
+    SemaDatecountPipe
   ],
   imports: [
     BrowserModule,
