@@ -9,12 +9,13 @@ import { Quote } from '../sema'
 export class SemaFormComponent implements OnInit {
 
   newQuote = new Quote(0,"","","",new Date());
-
-  @Output () sendData = new EventEmitter<Quote>();
+  @Output () addNewQuote = new EventEmitter<Quote>();
 
   sendForm (){
-    this.sendData.emit(this.newQuote);
+    this.addNewQuote.emit(this.newQuote);
+    this.newQuote = new Quote(0,"","","",new Date());
   }
+
   constructor() { }
 
   ngOnInit() {  

@@ -1,1 +1,27 @@
-<p>like-sema works!</p>
+<div class="like-box">
+	<br>
+	<div class="row">
+		<div class="col-md-6">
+		  <p class="votenumber" id="kura">
+		    {{numberOfLikes}}
+		  </p>
+		</div>
+		<div class="col-md-6">
+		  <p class="votenumber" id="kura">
+		    {{numberOfDisLikes}}
+		  </p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="class-md-6">
+			<p>
+				<button type="button" class="btn btn-success" id="likebutton" (click)="likeButtonClick()">Like</button>
+			</p>
+		</div>
+		<div class="class-md-6">
+			<p>
+				<button type="button" class="btn btn-dark" id="dislikebutton" (click)="dislikeButtonClick()">Dislike</button>
+			</p>
+		</div>
+	</div>
+</div>
