@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SemaComponent } from './sema/sema.component';
+import { SemaDescriptionComponent } from './sema-description/sema-description.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SemaComponent
+    SemaComponent,
+    SemaDescriptionComponent
   ],
   imports: [
     BrowserModule,

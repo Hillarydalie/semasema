@@ -1,1 +1,48 @@
-<p>sema works!</p>
+<nav class="navbar fixed-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="assets/images/sema-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    SEMA
+  </a>
+</nav>
+<hr>
+
+<div class="container-full">
+  <div>
+    <ul>
+      <div class="container-full" id="snap">
+        <div class="row">
+          <div class="col-md-3" id="quotecorner" *ngFor='let quote of quotes;let i=index'>
+            <li>
+              <div class="container text-left header">
+                <h4>{{quote.author}}</h4> <br>
+              </div>
+              <div class="container text-left quotecontent">
+                <p>{{quote.quote}}</p>
+              </div>
+              <div class="container footer text-right">
+                Submitted by <strong>{{quote.nameSubmitter}}</strong><br>
+                <em>Posted {{quote.postDate|semaDatecount}} days ago.</em>
+              </div>
+              <div class="container text-center kura">
+                <app-like-sema></app-like-sema>
+              </div>
+              <div class="container text-center sticky-bottom deleteQuote">
+                <app-sema-description [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-sema-description>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <app-sema-form></app-sema-form>
+      </div>
+    </div>
+  </div>
+</div>
