@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+/*Import Fonts for the outlay*/
+
+body {
+    overflow-x: hidden;
+    background-image: url(../src/assets/images/interlaced.png);
+}
+
+/*Delete confirmation button*/
+button#yesButton:hover {
+    background-color: red;
+    color: white;
+}
+
+/*Delete ingnore button*/
+button#noButton:hover {
+    background-color: blue;
+    color: white;
+}
+
+/*Header having author Name*/
+.container.text-left.header {
+    padding-top: 5%;
+}
+
+/*Quote  box background*/
+div#quotecorner {
+    background: rgba(228, 193, 147, 0.8);
+    padding: 2% 0% 2% 0%;
+    margin: 2% 3%;
+}
+/*Navigation Bar*/
+ul#navbar {
+    display: flex;
+    align-items: flex-end;
+}
+
+/*Quote section post generator*/
+li {
+    list-style-type: none;
+    background-color: transparent;
+    color: black;
+}
+
+div#snap {
+    padding-top: 2%;
+}
+
+/*Vote button*/
+button#likebutton {
+    padding-right: 7%;
+    margin-right: 3%;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    text-orientation: sideways-right;
+    letter-spacing: normal;
+    font-size: x-large;
+    text-transform: none;
+}/* You can add global styles to this file, and also import other style files */

@@ -1,0 +1,52 @@
+<div class="new-quote">
+  <p class="votenumber" id="kura">
+    {{newQuote}}
+  </p>
+</div>
+
+<div class="row">
+  <div class="container text-left">
+      <form class="container" (ngSubmit) = 'sendForm()'>
+        <!-- This is the name of the Author quoting -->
+        <div class="form-group">
+          <label for="author">Enter Author Name Here</label>
+          <input class="form-control form-control-sm" [(ngModel)]="newQuote.author" #author='ngModel' placeholder="John Doe" id="name"  type="text" name="" required>
+          {{newQuote.author}}
+          <div [hidden] = 'author.valid || author.pristine' class="alert alert-danger">
+            <small>Author name required</small>
+          </div>
+        </div>
+        <!-- End section of the Author entry -->
+        <!-- Beginning of Submitting Person -->
+        <div class="form-group">
+          <label for="uploaded">Your Name</label>
+          <input type="text" class="form-control form-control-sm" id="author" placeholder="Atieno Ayoo" [(ngModel)] = 'newQuote.uploadedBy' #uploadedBy = 'ngModel' name="uploadedBy">
+          {{newQuote.uploadedBy}}
+          <div [hidden] = 'uploadedBy.valid || uploadedBy.pristine' class="alert alert-danger">
+            <small>Uploader's Name Required</small>
+          </div>
+        </div>
+        <!-- End of Submitting Person -->
+        <!-- Quote Description -->
+        <div class="form-group">
+          <label>Your Quote</label>
+          <textarea name="quote" id="quote" class="form-control form-control-sm" id="description" [(ngModel)] = 'newQuote.quote' #quote = 'ngModel' required>
+          </textarea>
+          <div [hidden] = 'quote.valid || quote.pristine' class="alert alert-danger">
+            <small>Quote is required</small>
+          </div>
+        </div>
+        <!-- End section of the description -->
+        <!-- Date section -->
+        <div class="form-group">
+          <label></label>
+          <input class="form-control form-control-sm" id="complete" type="date" name="datePosted" required>
+        </div>
+        <!-- End date section -->
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-outline-primary">Submit Quote</button>
+        <!-- End submit button -->
+      </form>
+  </div>
+</div>
+
