@@ -37,11 +37,10 @@ ul#navbar {
 /*Quote section post generator*/
 li {
     list-style-type: none;
-    background-color: transparent;
+    background-color: rgba(57, 64, 58, 0.38);
     color: black;
     padding-top: 3%;
 }
-
 div#snap {
     padding-top: 2%;
 }
