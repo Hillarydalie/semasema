@@ -18,7 +18,7 @@ export class SemaComponent implements OnInit {
   addNewQuote(quote) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength +1;
-    this.quotes.push(quote)
+    this.quotes.push(quote);
   }
 
   toggleDetails(index){

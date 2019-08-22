@@ -60,3 +60,7 @@ a {
     font-size: x-large;
     text-transform: none;
 }/* You can add global styles to this file, and also import other style files */
+
+p#kura {
+    margin-left: 6%;
+}
