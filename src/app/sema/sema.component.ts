@@ -15,9 +15,10 @@ export class SemaComponent implements OnInit {
     new Quote(3,'Mwaura Muthee', 'Kip Otele','Not everytime change has to be given, sometimes, change has to be asked for.',new Date(2013,8,14),0,0),
   ];
 
-  addNewQuote(quote) {
+  updateQuote(quote) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength +1;
+    quote.postDatem = new Date ;
     this.quotes.push(quote);
   }
 

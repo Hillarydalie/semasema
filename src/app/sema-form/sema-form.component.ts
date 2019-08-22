@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+  import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../sema'
 
 @Component({
@@ -13,7 +13,7 @@ export class SemaFormComponent implements OnInit {
 
   sendForm (){
     this.addNewQuote.emit(this.newQuote);
-    this.newQuote = new Quote(0,"","","",new Date(),0,0);
+    this.newQuote = new Quote(0," "," "," ",new Date(),0,0);
   }
 
   constructor() { }
