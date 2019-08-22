@@ -12,7 +12,7 @@ export class SemaComponent implements OnInit {
    quotes:Quote [] = [
     new Quote(1,'John Piper', 'Hillary Dalie', 'God is most glorified in us when we are most satisfied in Him',new Date(2012,3,14),0,0),
     new Quote(2,'J.I. Packer','Daniel Kamata', 'Your faith will not fail while God purposes to sustain it.',new Date(2013,4,1),0,0),
-    new Quote(3,'Mwaura Muthee', 'Kip Otele','Not everytime change has to be given, sometimes change has to be asked for.',new Date(2013,8,14),0,0),
+    new Quote(3,'Mwaura Muthee', 'Kip Otele','Not everytime change has to be given, sometimes, change has to be asked for.',new Date(2013,8,14),0,0),
   ];
 
   addNewQuote(quote) {
