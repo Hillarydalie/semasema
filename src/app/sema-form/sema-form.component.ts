@@ -8,12 +8,12 @@ import { Quote } from '../sema'
 })
 export class SemaFormComponent implements OnInit {
 
-  newQuote = new Quote(0,"","","",new Date());
+  newQuote = new Quote(0,"","","",new Date(),0,0);
   @Output () addNewQuote = new EventEmitter<Quote>();
 
   sendForm (){
     this.addNewQuote.emit(this.newQuote);
-    this.newQuote = new Quote(0,"","","",new Date());
+    this.newQuote = new Quote(0,"","","",new Date(),0,0);
   }
 
   constructor() { }

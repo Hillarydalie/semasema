@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Quote } from '../sema';
 
 
@@ -20,22 +20,22 @@ export class LikeSemaComponent {
     this.numberOfDisLikes +=1;
   }
 
-  startNum:number
-  lastNum:number
-  ctr:number
+  // startNum:number
+  // lastNum:number
+  // ctr:number
 
-  hUpvote(){
-   this.startNum = 0
-   this.lastNum = 0
-    for(this.ctr=0 ; this.ctr < this.quotes.length; this.ctr++) {
-     this.lastNum = this.quotes[this.ctr].upvotes;
-   if(this.lastNum > this.startNum){
-     this.startNum = this.lastNum
-     }
-   }
+  // hUpvote(){
+  //  this.startNum = 0
+  //  this.lastNum = 0
+  //   for(this.ctr=0 ; this.ctr < this.quotes.length; this.ctr++) {
+  //    this.lastNum = this.quotes[this.ctr].upvotes;
+  //  if(this.lastNum > this.startNum){
+  //    this.startNum = this.lastNum
+  //    }
+  //  }
 
-  return  this.startNum
-  }
+  // return  this.startNum
+  // }
 
   constructor() {}
 

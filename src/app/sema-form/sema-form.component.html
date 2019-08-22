@@ -1,10 +1,10 @@
 <div class="row">
   <div class="container col-md-6 text-left">
-      <form (ngSubmit)= 'addNewQuote()' #quoteForm='ngForm'>
+      <form (ngSubmit)= 'sendForm()' #quoteForm='ngForm'>
         <!-- This is the name of the Author quoting -->
         <div class="form-group">
           <label for="author">Enter Author Name Here</label>
-          <input class="form-control form-control-sm" [(ngModel)]="newQuote.author" #author='ngModel' placeholder="John Doe" id="name"  type="text" name="" required>
+          <input class="form-control" [(ngModel)]="newQuote.author" #author='ngModel' placeholder="John Doe" id="name"  type="text" name="author" required>
           {{newQuote.author}}
           <div [hidden] = 'author.valid || author.pristine' class="alert alert-danger">
             <small>Author name required</small>
@@ -14,7 +14,7 @@
         <!-- Beginning of Submitting Person -->
         <div class="form-group">
           <label for="uploaded">Your Name</label>
-          <input type="text" class="form-control form-control-sm" id="author" placeholder="Atieno Ayoo" [(ngModel)] = 'newQuote.uploadedBy' #uploadedBy = 'ngModel' name="uploadedBy">
+          <input type="text" class="form-control" id="author" placeholder="Atieno Ayoo" [(ngModel)]='newQuote.uploadedBy' #uploadedBy='ngModel' name="uploadedBy">
           <div [hidden] = 'uploadedBy.valid || uploadedBy.pristine' class="alert alert-danger">
             <small>Uploader's Name Required</small>
           </div>
@@ -23,7 +23,7 @@
         <!-- Quote Description -->
         <div class="form-group">
           <label>Your Quote</label>
-          <textarea name="quote" id="quote" class="form-control form-control-sm" id="description" [(ngModel)] = 'newQuote.quote' #quote = 'ngModel' required>
+          <textarea name="quote" id="quote" class="form-control" id="description" [(ngModel)]='newQuote.quote' #quote = 'ngModel' required>
           </textarea>
           <div [hidden] = 'quote.valid || quote.pristine' class="alert alert-danger">
             <small>Quote is required</small>
@@ -33,11 +33,11 @@
         <!-- Date section -->
         <div class="form-group">
           <label></label>
-          <input class="form-control form-control-sm" id="complete" type="date" name="datePosted" required>
+          <input class="form-control" id="complete" type="date" name="datePosted" required>
         </div>
         <!-- End date section -->
         <!-- Submit button -->
-        <button type="submit" class="btn btn-outline-primary" >Submit Quote</button>
+        <button type="submit" class="btn btn-outline-primary" name="button">Submit Quote</button>
         <!-- End submit button -->
       </form>
   </div>

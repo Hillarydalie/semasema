@@ -8,38 +8,71 @@
 
 <div class="container-full">
   <div>
-    <ul>
-      <div class="container-full" id="snap">
-        <div class="row">
-          <div class="col-md-3" id="quotecorner" *ngFor='let quote of quotes;let i=index'>
-            <li>
-              <div class="container text-left header">
-                <h4>{{quote.author}}</h4> <br>
-              </div>
-              <div class="container text-left quotecontent">
-                <p>{{quote.quote}}</p>
-              </div>
-              <div class="container footer text-right">
-                Submitted by <strong>{{quote.nameSubmitter}}</strong><br>
-                <em>Posted {{quote.postDate|semaDatecount}} days ago.</em>
-              </div>
-              <div class="container text-center kura">
-                <app-like-sema></app-like-sema>
-              </div>
-              <div class="container text-center sticky-bottom deleteQuote">
-                <app-sema-description [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-sema-description>
-              </div>
-            </li>
-          </div>
-        </div>
+    
+      <div class="container-full" id="snap" *ngFor='let quote of quotes;let i=index'>
+        
+            <ul >
+              <li>
+                <div class="text-left header">
+                  <h4>{{quote.author}}</h4> <br>
+                </div>
+                <div class="text-left quotecornertent">
+                  <p appHighlight *ngIf="hUpvote()===quote.numberOfLikes && quote.numberOfLikes>0">
+                    {{quote.quote}}
+                  </p>
+                  <p *ngIf="hUpvote()!==quote.numberOfLikes || quote.numberOfLikes===0">
+                  {{quote.quote}}
+                  </p>
+                </div>
+                <div class="footer text-right">
+                  Submitted by <strong>{{quote.nameSubmitter}}</strong><br>
+                  <em>Posted {{quote.postDate|semaDatecount}} days ago.</em>
+                </div>
+                <div class=" text-center kura">
+                  
+                </div>
+                <div class="like-box">
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p class="votenumber" id="kura">
+                          {{quote.numberOfLikes}}
+                        </p>
+                      </div>
+                      <div class="col-md-6">
+                        <p class="votenumber" id="kura">
+                          {{quote.numberOfDisLikes}}
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="class-md-6">
+                        <p>
+                          <!-- <i class="fa fa-thumbs-up" aria-hidden="true" (click)="likeButtonClick(i)"></i> -->
+                          
+                          
+                          <button type="button" class="btn btn-success" id="likebutton" (click)="likeButtonClick(i)">Like</button>
+                        </p>
+                      </div>
+                      <div class="class-md-6">
+                        <p>
+                          <!-- <i class="fa fa-thumbs-down ml-5" aria-hidden="true" (click)="dislikeButtonClick(i)"></i> -->
+                          <button type="button" class="btn btn-dark" id="dislikebutton" (click)="dislikeButtonClick(i)">Dislike</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                <div class="container text-center sticky-bottom deleteQuote">
+                  <app-sema-description [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-sema-description>
+                </div>
+              </li>
+            </ul>
+    
       </div>
-    </ul>
+   
   </div>
 </div>
 
-<p>
-  {{newQuote.uploadedBy}}
-</p>
 <!-- <div class="container-full">
   <div class="row">
     <div class="col-md-3" id="quotecorner" *ngFor='let quote of quotes;let i=index'>
