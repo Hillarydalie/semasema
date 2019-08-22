@@ -32,7 +32,7 @@ export class SemaComponent implements OnInit {
     }
   }
 
-  numberOfLikes : number = 0;
+    numberOfLikes : number = 0;
   numberOfDisLikes : number = 0;
   
   likeButtonClick(i) {

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input,  Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../sema'; 
 
 @Component({
@@ -14,6 +14,10 @@ export class SemaDescriptionComponent implements OnInit {
   quoteComplete(complete:boolean){
     this.isComplete.emit(complete);
   }
+
+  // quoteDelete(complete:boolean){
+  //   this.isComplete.splice(complete);
+  // }
 
   constructor() { }
 
