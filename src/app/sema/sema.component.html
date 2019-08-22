@@ -20,7 +20,7 @@
                   <p appHighlight *ngIf="hUpvote()===quote.numberOfLikes && quote.numberOfLikes>0">
                     {{quote.quote}}
                   </p>
-                  <p *ngIf="hUpvote()!==quote.numberOfLikes || quote.numberOfLikes===0">
+                  <p id="textbox" *ngIf="hUpvote()!==quote.numberOfLikes || quote.numberOfLikes===0">
                   {{quote.quote}}
                   </p>
                 </div>
